@@ -1,0 +1,4 @@
+Este es un texto
+que contiene
+múltiples líneas
+otras líneas
