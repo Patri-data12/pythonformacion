@@ -1,0 +1,5 @@
+sex,solo,Probabilidad_Supervivencia
+female,False,0.7127659574468085
+female,True,0.7857142857142857
+male,False,0.2710843373493976
+male,True,0.15571776155717762
