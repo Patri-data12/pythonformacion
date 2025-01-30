@@ -23,7 +23,7 @@
       "execution_count": 1,
       "metadata": {
         "gather": {
-          "logged": 1738148862462
+          "logged": 1738222914803
         }
       }
     },
@@ -42,7 +42,7 @@
       "execution_count": 2,
       "metadata": {
         "gather": {
-          "logged": 1738148864678
+          "logged": 1738222916138
         }
       }
     },
@@ -68,7 +68,7 @@
       "execution_count": 3,
       "metadata": {
         "gather": {
-          "logged": 1738148865092
+          "logged": 1738222916483
         }
       }
     },
@@ -92,7 +92,7 @@
       "execution_count": 4,
       "metadata": {
         "gather": {
-          "logged": 1738148865585
+          "logged": 1738222916875
         }
       }
     },
@@ -116,7 +116,7 @@
       "execution_count": 5,
       "metadata": {
         "gather": {
-          "logged": 1738148866033
+          "logged": 1738222917299
         }
       }
     },
@@ -140,7 +140,7 @@
       "execution_count": 6,
       "metadata": {
         "gather": {
-          "logged": 1738148866522
+          "logged": 1738222917708
         }
       }
     },
@@ -167,7 +167,7 @@
       "execution_count": 7,
       "metadata": {
         "gather": {
-          "logged": 1738148866955
+          "logged": 1738222918263
         }
       }
     },
@@ -191,7 +191,7 @@
       "execution_count": 8,
       "metadata": {
         "gather": {
-          "logged": 1738148867367
+          "logged": 1738222918621
         }
       }
     },
@@ -205,7 +205,7 @@
       "execution_count": 9,
       "metadata": {
         "gather": {
-          "logged": 1738148867822
+          "logged": 1738222918990
         }
       }
     },
@@ -231,7 +231,7 @@
       "execution_count": 10,
       "metadata": {
         "gather": {
-          "logged": 1738148868378
+          "logged": 1738222919365
         }
       }
     },
@@ -277,7 +277,7 @@
       "execution_count": 12,
       "metadata": {
         "gather": {
-          "logged": 1738148870224
+          "logged": 1738222923151
         }
       }
     },
@@ -289,10 +289,10 @@
         "dffr.to_csv('./datos/Frutas.csv')"
       ],
       "outputs": [],
-      "execution_count": 14,
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148899017
+          "logged": 1738222926212
         }
       }
     },
@@ -302,23 +302,11 @@
         "con_sqlt=sqlite3.connect(\"./datos/database.db\")\n",
         "dfxl.to_sql(name='Purchases', con=con_sqlt)"
       ],
-      "outputs": [
-        {
-          "output_type": "error",
-          "ename": "NameError",
-          "evalue": "name 'dfxl' is not defined",
-          "traceback": [
-            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
-            "Cell \u001b[0;32mIn[15], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m con_sqlt\u001b[38;5;241m=\u001b[39msqlite3\u001b[38;5;241m.\u001b[39mconnect(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m./datos/database.db\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[0;32m----> 2\u001b[0m \u001b[43mdfxl\u001b[49m\u001b[38;5;241m.\u001b[39mto_sql(name\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mPurchases\u001b[39m\u001b[38;5;124m'\u001b[39m, con\u001b[38;5;241m=\u001b[39mcon_sqlt)\n",
-            "\u001b[0;31mNameError\u001b[0m: name 'dfxl' is not defined"
-          ]
-        }
-      ],
-      "execution_count": 15,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148904402
+          "logged": 1738222926250
         }
       }
     },
@@ -335,17 +323,11 @@
         "#INFO sobre el dataframe\n",
         "dffr.info()\n"
       ],
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": "<class 'pandas.core.frame.DataFrame'>\nIndex: 4 entries, Luis to Pedro\nData columns (total 2 columns):\n #   Column   Non-Null Count  Dtype\n---  ------   --------------  -----\n 0   apples   4 non-null      int64\n 1   oranges  4 non-null      int64\ndtypes: int64(2)\nmemory usage: 96.0+ bytes\n"
-        }
-      ],
-      "execution_count": 16,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148910040
+          "logged": 1738222926287
         }
       }
     },
@@ -354,17 +336,11 @@
       "source": [
         "dfcol.info()"
       ],
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": "<class 'pandas.core.frame.DataFrame'>\nRangeIndex: 14 entries, 0 to 13\nData columns (total 6 columns):\n #   Column      Non-Null Count  Dtype  \n---  ------      --------------  -----  \n 0   nombre      14 non-null     object \n 1   edad        14 non-null     int64  \n 2   sexo        14 non-null     object \n 3   peso        13 non-null     float64\n 4   altura      14 non-null     float64\n 5   colesterol  13 non-null     float64\ndtypes: float64(3), int64(1), object(2)\nmemory usage: 800.0+ bytes\n"
-        }
-      ],
-      "execution_count": 17,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148913503
+          "logged": 1738222926324
         }
       }
     },
@@ -374,20 +350,11 @@
         "dfcol.size\n",
         "dfcol.shape\n"
       ],
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "execution_count": 20,
-          "data": {
-            "text/plain": "(14, 6)"
-          },
-          "metadata": {}
-        }
-      ],
-      "execution_count": 20,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148940390
+          "logged": 1738222926359
         }
       }
     },
@@ -398,17 +365,11 @@
         "print(dfcol.index)\n",
         "print(dfcol.index)\n"
       ],
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": "Index(['nombre', 'edad', 'sexo', 'peso', 'altura', 'colesterol'], dtype='object')\nRangeIndex(start=0, stop=14, step=1)\nRangeIndex(start=0, stop=14, step=1)\n"
-        }
-      ],
-      "execution_count": 19,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148937776
+          "logged": 1738222926394
         }
       }
     },
@@ -417,17 +378,11 @@
       "source": [
         "print(dfcol.dtypes)"
       ],
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": "nombre         object\nedad            int64\nsexo           object\npeso          float64\naltura        float64\ncolesterol    float64\ndtype: object\n"
-        }
-      ],
-      "execution_count": 18,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148930374
+          "logged": 1738222926430
         }
       }
     },
@@ -436,21 +391,11 @@
       "source": [
         "dfcol.head()"
       ],
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "execution_count": 21,
-          "data": {
-            "text/plain": "                         nombre  edad sexo  peso  altura  colesterol\n0  José Luis Martínez Izquierdo    18    H  85.0    1.79       182.0\n1                Rosa Díaz Díaz    32    M  65.0    1.73       232.0\n2         Javier García Sánchez    24    H   NaN    1.81       191.0\n3           Carmen López Pinzón    35    M  65.0    1.70       200.0\n4          Marisa López Collado    46    M  51.0    1.58       148.0",
-            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>nombre</th>\n      <th>edad</th>\n      <th>sexo</th>\n      <th>peso</th>\n      <th>altura</th>\n      <th>colesterol</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>José Luis Martínez Izquierdo</td>\n      <td>18</td>\n      <td>H</td>\n      <td>85.0</td>\n      <td>1.79</td>\n      <td>182.0</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>Rosa Díaz Díaz</td>\n      <td>32</td>\n      <td>M</td>\n      <td>65.0</td>\n      <td>1.73</td>\n      <td>232.0</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>Javier García Sánchez</td>\n      <td>24</td>\n      <td>H</td>\n      <td>NaN</td>\n      <td>1.81</td>\n      <td>191.0</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>Carmen López Pinzón</td>\n      <td>35</td>\n      <td>M</td>\n      <td>65.0</td>\n      <td>1.70</td>\n      <td>200.0</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>Marisa López Collado</td>\n      <td>46</td>\n      <td>M</td>\n      <td>51.0</td>\n      <td>1.58</td>\n      <td>148.0</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
-          },
-          "metadata": {}
-        }
-      ],
-      "execution_count": 21,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148947797
+          "logged": 1738222926464
         }
       }
     },
@@ -459,21 +404,11 @@
       "source": [
         "dfcol.tail()"
       ],
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "execution_count": 22,
-          "data": {
-            "text/plain": "                             nombre  edad sexo   peso  altura  colesterol\n9           Santiago Reillo Manzano    46    H   75.0    1.85       280.0\n10            Macarena Álvarez Luna    53    M   55.0    1.62       262.0\n11       José María de la Guía Sanz    58    H   78.0    1.87       198.0\n12  Miguel Angel Cuadrado Gutiérrez    27    H  109.0    1.98       210.0\n13            Carolina Rubio Moreno    20    M   61.0    1.77       194.0",
-            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>nombre</th>\n      <th>edad</th>\n      <th>sexo</th>\n      <th>peso</th>\n      <th>altura</th>\n      <th>colesterol</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>9</th>\n      <td>Santiago Reillo Manzano</td>\n      <td>46</td>\n      <td>H</td>\n      <td>75.0</td>\n      <td>1.85</td>\n      <td>280.0</td>\n    </tr>\n    <tr>\n      <th>10</th>\n      <td>Macarena Álvarez Luna</td>\n      <td>53</td>\n      <td>M</td>\n      <td>55.0</td>\n      <td>1.62</td>\n      <td>262.0</td>\n    </tr>\n    <tr>\n      <th>11</th>\n      <td>José María de la Guía Sanz</td>\n      <td>58</td>\n      <td>H</td>\n      <td>78.0</td>\n      <td>1.87</td>\n      <td>198.0</td>\n    </tr>\n    <tr>\n      <th>12</th>\n      <td>Miguel Angel Cuadrado Gutiérrez</td>\n      <td>27</td>\n      <td>H</td>\n      <td>109.0</td>\n      <td>1.98</td>\n      <td>210.0</td>\n    </tr>\n    <tr>\n      <th>13</th>\n      <td>Carolina Rubio Moreno</td>\n      <td>20</td>\n      <td>M</td>\n      <td>61.0</td>\n      <td>1.77</td>\n      <td>194.0</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
-          },
-          "metadata": {}
-        }
-      ],
-      "execution_count": 22,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148982248
+          "logged": 1738222926498
         }
       }
     },
@@ -482,21 +417,11 @@
       "source": [
         "dfcol.describe()"
       ],
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "execution_count": 23,
-          "data": {
-            "text/plain": "            edad        peso     altura  colesterol\ncount  14.000000   13.000000  14.000000   13.000000\nmean   38.214286   70.923077   1.768571  220.230769\nstd    15.621379   16.126901   0.115016   39.847948\nmin    18.000000   51.000000   1.580000  148.000000\n25%    24.750000   61.000000   1.705000  194.000000\n50%    35.000000   65.000000   1.755000  210.000000\n75%    49.750000   78.000000   1.840000  249.000000\nmax    68.000000  109.000000   1.980000  280.000000",
-            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>edad</th>\n      <th>peso</th>\n      <th>altura</th>\n      <th>colesterol</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>count</th>\n      <td>14.000000</td>\n      <td>13.000000</td>\n      <td>14.000000</td>\n      <td>13.000000</td>\n    </tr>\n    <tr>\n      <th>mean</th>\n      <td>38.214286</td>\n      <td>70.923077</td>\n      <td>1.768571</td>\n      <td>220.230769</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>15.621379</td>\n      <td>16.126901</td>\n      <td>0.115016</td>\n      <td>39.847948</td>\n    </tr>\n    <tr>\n      <th>min</th>\n      <td>18.000000</td>\n      <td>51.000000</td>\n      <td>1.580000</td>\n      <td>148.000000</td>\n    </tr>\n    <tr>\n      <th>25%</th>\n      <td>24.750000</td>\n      <td>61.000000</td>\n      <td>1.705000</td>\n      <td>194.000000</td>\n    </tr>\n    <tr>\n      <th>50%</th>\n      <td>35.000000</td>\n      <td>65.000000</td>\n      <td>1.755000</td>\n      <td>210.000000</td>\n    </tr>\n    <tr>\n      <th>75%</th>\n      <td>49.750000</td>\n      <td>78.000000</td>\n      <td>1.840000</td>\n      <td>249.000000</td>\n    </tr>\n    <tr>\n      <th>max</th>\n      <td>68.000000</td>\n      <td>109.000000</td>\n      <td>1.980000</td>\n      <td>280.000000</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
-          },
-          "metadata": {}
-        }
-      ],
-      "execution_count": 23,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148985986
+          "logged": 1738222926531
         }
       }
     },
@@ -512,21 +437,11 @@
       "source": [
         "dfcol.rename(columns={'nombre':'nombre y apellido', 'peso':'pesos'}, index={0:1000,10:101}, inplace=False) #True lo hace y no lo vemos"
       ],
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "execution_count": 24,
-          "data": {
-            "text/plain": "                    nombre y apellido  edad sexo  pesos  altura  colesterol\n1000     José Luis Martínez Izquierdo    18    H   85.0    1.79       182.0\n1                      Rosa Díaz Díaz    32    M   65.0    1.73       232.0\n2               Javier García Sánchez    24    H    NaN    1.81       191.0\n3                 Carmen López Pinzón    35    M   65.0    1.70       200.0\n4                Marisa López Collado    46    M   51.0    1.58       148.0\n5                   Antonio Ruiz Cruz    68    H   66.0    1.74       249.0\n6             Antonio Fernández Ocaña    51    H   62.0    1.72       276.0\n7               Pilar Martín González    22    M   60.0    1.66         NaN\n8                Pedro Gálvez Tenorio    35    H   90.0    1.94       241.0\n9             Santiago Reillo Manzano    46    H   75.0    1.85       280.0\n101             Macarena Álvarez Luna    53    M   55.0    1.62       262.0\n11         José María de la Guía Sanz    58    H   78.0    1.87       198.0\n12    Miguel Angel Cuadrado Gutiérrez    27    H  109.0    1.98       210.0\n13              Carolina Rubio Moreno    20    M   61.0    1.77       194.0",
-            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>nombre y apellido</th>\n      <th>edad</th>\n      <th>sexo</th>\n      <th>pesos</th>\n      <th>altura</th>\n      <th>colesterol</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>1000</th>\n      <td>José Luis Martínez Izquierdo</td>\n      <td>18</td>\n      <td>H</td>\n      <td>85.0</td>\n      <td>1.79</td>\n      <td>182.0</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>Rosa Díaz Díaz</td>\n      <td>32</td>\n      <td>M</td>\n      <td>65.0</td>\n      <td>1.73</td>\n      <td>232.0</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>Javier García Sánchez</td>\n      <td>24</td>\n      <td>H</td>\n      <td>NaN</td>\n      <td>1.81</td>\n      <td>191.0</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>Carmen López Pinzón</td>\n      <td>35</td>\n      <td>M</td>\n      <td>65.0</td>\n      <td>1.70</td>\n      <td>200.0</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>Marisa López Collado</td>\n      <td>46</td>\n      <td>M</td>\n      <td>51.0</td>\n      <td>1.58</td>\n      <td>148.0</td>\n    </tr>\n    <tr>\n      <th>5</th>\n      <td>Antonio Ruiz Cruz</td>\n      <td>68</td>\n      <td>H</td>\n      <td>66.0</td>\n      <td>1.74</td>\n      <td>249.0</td>\n    </tr>\n    <tr>\n      <th>6</th>\n      <td>Antonio Fernández Ocaña</td>\n      <td>51</td>\n      <td>H</td>\n      <td>62.0</td>\n      <td>1.72</td>\n      <td>276.0</td>\n    </tr>\n    <tr>\n      <th>7</th>\n      <td>Pilar Martín González</td>\n      <td>22</td>\n      <td>M</td>\n      <td>60.0</td>\n      <td>1.66</td>\n      <td>NaN</td>\n    </tr>\n    <tr>\n      <th>8</th>\n      <td>Pedro Gálvez Tenorio</td>\n      <td>35</td>\n      <td>H</td>\n      <td>90.0</td>\n      <td>1.94</td>\n      <td>241.0</td>\n    </tr>\n    <tr>\n      <th>9</th>\n      <td>Santiago Reillo Manzano</td>\n      <td>46</td>\n      <td>H</td>\n      <td>75.0</td>\n      <td>1.85</td>\n      <td>280.0</td>\n    </tr>\n    <tr>\n      <th>101</th>\n      <td>Macarena Álvarez Luna</td>\n      <td>53</td>\n      <td>M</td>\n      <td>55.0</td>\n      <td>1.62</td>\n      <td>262.0</td>\n    </tr>\n    <tr>\n      <th>11</th>\n      <td>José María de la Guía Sanz</td>\n      <td>58</td>\n      <td>H</td>\n      <td>78.0</td>\n      <td>1.87</td>\n      <td>198.0</td>\n    </tr>\n    <tr>\n      <th>12</th>\n      <td>Miguel Angel Cuadrado Gutiérrez</td>\n      <td>27</td>\n      <td>H</td>\n      <td>109.0</td>\n      <td>1.98</td>\n      <td>210.0</td>\n    </tr>\n    <tr>\n      <th>13</th>\n      <td>Carolina Rubio Moreno</td>\n      <td>20</td>\n      <td>M</td>\n      <td>61.0</td>\n      <td>1.77</td>\n      <td>194.0</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
-          },
-          "metadata": {}
-        }
-      ],
-      "execution_count": 24,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148990761
+          "logged": 1738222926564
         }
       }
     },
@@ -535,25 +450,11 @@
       "source": [
         "dfcol.set_index('nombre y apellido')"
       ],
-      "outputs": [
-        {
-          "output_type": "error",
-          "ename": "KeyError",
-          "evalue": "\"None of ['nombre y apellido'] are in the columns\"",
-          "traceback": [
-            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-            "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
-            "\u001b[0;32m/tmp/ipykernel_3902/678525340.py\u001b[0m in \u001b[0;36m?\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mdfcol\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mset_index\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'nombre y apellido'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
-            "\u001b[0;32m/anaconda/envs/azureml_py38/lib/python3.10/site-packages/pandas/util/_decorators.py\u001b[0m in \u001b[0;36m?\u001b[0;34m(*args, **kwargs)\u001b[0m\n\u001b[1;32m    307\u001b[0m                     \u001b[0mmsg\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mformat\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0marguments\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0marguments\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    308\u001b[0m                     \u001b[0mFutureWarning\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    309\u001b[0m                     \u001b[0mstacklevel\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mstacklevel\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    310\u001b[0m                 )\n\u001b[0;32m--> 311\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mfunc\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
-            "\u001b[0;32m/anaconda/envs/azureml_py38/lib/python3.10/site-packages/pandas/core/frame.py\u001b[0m in \u001b[0;36m?\u001b[0;34m(self, keys, drop, append, inplace, verify_integrity)\u001b[0m\n\u001b[1;32m   5447\u001b[0m                     \u001b[0;32mif\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0mfound\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   5448\u001b[0m                         \u001b[0mmissing\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mappend\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mcol\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   5449\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   5450\u001b[0m         \u001b[0;32mif\u001b[0m \u001b[0mmissing\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 5451\u001b[0;31m             \u001b[0;32mraise\u001b[0m \u001b[0mKeyError\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf\"None of {missing} are in the columns\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   5452\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   5453\u001b[0m         \u001b[0;32mif\u001b[0m \u001b[0minplace\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   5454\u001b[0m             \u001b[0mframe\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-            "\u001b[0;31mKeyError\u001b[0m: \"None of ['nombre y apellido'] are in the columns\""
-          ]
-        }
-      ],
-      "execution_count": 25,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148994063
+          "logged": 1738222926598
         }
       }
     },
@@ -562,21 +463,11 @@
       "source": [
         "dfcol.reindex(index=[4,3,1], columns=['edad', 'altura'])"
       ],
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "execution_count": 26,
-          "data": {
-            "text/plain": "   edad  altura\n4    46    1.58\n3    35    1.70\n1    32    1.73",
-            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>edad</th>\n      <th>altura</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>4</th>\n      <td>46</td>\n      <td>1.58</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>35</td>\n      <td>1.70</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>32</td>\n      <td>1.73</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
-          },
-          "metadata": {}
-        }
-      ],
-      "execution_count": 26,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148998205
+          "logged": 1738222926627
         }
       }
     },
@@ -593,20 +484,11 @@
         "#acceder a fila o posición concreta\n",
         "dfcol.iloc[1,3]"
       ],
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "execution_count": 27,
-          "data": {
-            "text/plain": "65.0"
-          },
-          "metadata": {}
-        }
-      ],
-      "execution_count": 27,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738149001809
+          "logged": 1738222926662
         }
       }
     },
@@ -619,7 +501,7 @@
       "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148776905
+          "logged": 1738222926695
         }
       }
     },
@@ -632,7 +514,7 @@
       "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148776930
+          "logged": 1738222926728
         }
       }
     },
@@ -645,7 +527,7 @@
       "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148776955
+          "logged": 1738222926761
         }
       }
     },
@@ -660,7 +542,7 @@
       "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148776981
+          "logged": 1738222926794
         }
       }
     },
@@ -673,7 +555,7 @@
       "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148777008
+          "logged": 1738222926831
         }
       }
     },
@@ -689,7 +571,7 @@
       "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148777035
+          "logged": 1738222926870
         }
       }
     },
@@ -704,7 +586,7 @@
       "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148777069
+          "logged": 1738222926918
         }
       }
     },
@@ -719,7 +601,7 @@
       "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1738148777101
+          "logged": 1738222926956
         }
       }
     },
@@ -766,22 +648,11 @@
         "payments.head()\n",
         "payments.info()"
       ],
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": "SQL: SELECT * FROM payments\n"
-        },
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": "     customernumber checknumber paymentdate    amount\n0               103    HQ336336  2004-10-19   6066.78\n1               103    JM555205  2003-06-05  14571.44\n2               103    OM314933  2004-12-18   1676.14\n3               112    BO864823  2004-12-17  14191.12\n4               112     HQ55022  2003-06-06  32641.98\n..              ...         ...         ...       ...\n254             495    BH167026  2003-12-26  59265.14\n255             495    FN155234  2004-05-14   6276.60\n256             496    EU531600  2005-05-25  30253.75\n257             496    MB342426  2003-07-16  32077.44\n258             496     MN89921  2004-12-31  52166.00\n\n[259 rows x 4 columns]\n<class 'pandas.core.frame.DataFrame'>\nRangeIndex: 259 entries, 0 to 258\nData columns (total 4 columns):\n #   Column          Non-Null Count  Dtype  \n---  ------          --------------  -----  \n 0   customernumber  259 non-null    int64  \n 1   checknumber     259 non-null    object \n 2   paymentdate     259 non-null    object \n 3   amount          259 non-null    float64\ndtypes: float64(1), int64(1), object(2)\nmemory usage: 8.2+ KB\n"
-        }
-      ],
-      "execution_count": 58,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1737622057236
+          "logged": 1738222926989
         }
       }
     },
@@ -813,17 +684,11 @@
         "df_filtered = df_payments[df_payments['amount'] > 400]\n",
         "print(df_filtered)"
       ],
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": "SQL: SELECT * FROM payments\n     customernumber checknumber paymentdate    amount\n0               103    HQ336336  2004-10-19   6066.78\n1               103    JM555205  2003-06-05  14571.44\n2               103    OM314933  2004-12-18   1676.14\n3               112    BO864823  2004-12-17  14191.12\n4               112     HQ55022  2003-06-06  32641.98\n..              ...         ...         ...       ...\n254             495    BH167026  2003-12-26  59265.14\n255             495    FN155234  2004-05-14   6276.60\n256             496    EU531600  2005-05-25  30253.75\n257             496    MB342426  2003-07-16  32077.44\n258             496     MN89921  2004-12-31  52166.00\n\n[259 rows x 4 columns]\n"
-        }
-      ],
-      "execution_count": 59,
+      "outputs": [],
+      "execution_count": null,
       "metadata": {
         "gather": {
-          "logged": 1737622057263
+          "logged": 1738222927023
         }
       }
     },
@@ -834,15 +699,13 @@
         "\n",
         "!pip install sqlalchemy"
       ],
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": "Requirement already satisfied: sqlalchemy in /anaconda/envs/azureml_py38/lib/python3.10/site-packages (2.0.37)\nRequirement already satisfied: greenlet!=0.4.17 in /anaconda/envs/azureml_py38/lib/python3.10/site-packages (from sqlalchemy) (3.1.1)\nRequirement already satisfied: typing-extensions>=4.6.0 in /anaconda/envs/azureml_py38/lib/python3.10/site-packages (from sqlalchemy) (4.12.2)\n"
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {
+        "gather": {
+          "logged": 1738222927058
         }
-      ],
-      "execution_count": 60,
-      "metadata": {}
+      }
     },
     {
       "cell_type": "code",
@@ -852,15 +715,13 @@
         "#df_payments[:10].to_sql('payments2',con=engine)\n",
         "print(engine)"
       ],
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": "Engine(postgresql://datafundamentals_owner:***@ep-tiny-truth-a28lcfjp.eu-central-1.aws.neon.tech/datafundamentals?sslmode=require)\n"
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {
+        "gather": {
+          "logged": 1738222927088
         }
-      ],
-      "execution_count": 69,
-      "metadata": {}
+      }
     },
     {
       "cell_type": "code",
@@ -869,19 +730,13 @@
         "\n",
         "df_payments[df_payments['amount']>400]"
       ],
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "execution_count": 71,
-          "data": {
-            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>customernumber</th>\n      <th>checknumber</th>\n      <th>paymentdate</th>\n      <th>amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>103</td>\n      <td>HQ336336</td>\n      <td>2004-10-19</td>\n      <td>6066.78</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>103</td>\n      <td>JM555205</td>\n      <td>2003-06-05</td>\n      <td>14571.44</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>103</td>\n      <td>OM314933</td>\n      <td>2004-12-18</td>\n      <td>1676.14</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>112</td>\n      <td>BO864823</td>\n      <td>2004-12-17</td>\n      <td>14191.12</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>112</td>\n      <td>HQ55022</td>\n      <td>2003-06-06</td>\n      <td>32641.98</td>\n    </tr>\n    <tr>\n      <th>...</th>\n      <td>...</td>\n      <td>...</td>\n      <td>...</td>\n      <td>...</td>\n    </tr>\n    <tr>\n      <th>254</th>\n      <td>495</td>\n      <td>BH167026</td>\n      <td>2003-12-26</td>\n      <td>59265.14</td>\n    </tr>\n    <tr>\n      <th>255</th>\n      <td>495</td>\n      <td>FN155234</td>\n      <td>2004-05-14</td>\n      <td>6276.60</td>\n    </tr>\n    <tr>\n      <th>256</th>\n      <td>496</td>\n      <td>EU531600</td>\n      <td>2005-05-25</td>\n      <td>30253.75</td>\n    </tr>\n    <tr>\n      <th>257</th>\n      <td>496</td>\n      <td>MB342426</td>\n      <td>2003-07-16</td>\n      <td>32077.44</td>\n    </tr>\n    <tr>\n      <th>258</th>\n      <td>496</td>\n      <td>MN89921</td>\n      <td>2004-12-31</td>\n      <td>52166.00</td>\n    </tr>\n  </tbody>\n</table>\n<p>259 rows × 4 columns</p>\n</div>",
-            "text/plain": "     customernumber checknumber paymentdate    amount\n0               103    HQ336336  2004-10-19   6066.78\n1               103    JM555205  2003-06-05  14571.44\n2               103    OM314933  2004-12-18   1676.14\n3               112    BO864823  2004-12-17  14191.12\n4               112     HQ55022  2003-06-06  32641.98\n..              ...         ...         ...       ...\n254             495    BH167026  2003-12-26  59265.14\n255             495    FN155234  2004-05-14   6276.60\n256             496    EU531600  2005-05-25  30253.75\n257             496    MB342426  2003-07-16  32077.44\n258             496     MN89921  2004-12-31  52166.00\n\n[259 rows x 4 columns]"
-          },
-          "metadata": {}
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {
+        "gather": {
+          "logged": 1738222927124
         }
-      ],
-      "execution_count": 71,
-      "metadata": {}
+      }
     },
     {
       "cell_type": "code",
@@ -889,19 +744,13 @@
         "# Escribe un programa Pandas para seleccionar solo las columnas \"checknumber\" y \"paymentdate\" del DataFrame.\n",
         "df_payments[['amount','paymentdate']]"
       ],
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "execution_count": 73,
-          "data": {
-            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>amount</th>\n      <th>paymentdate</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>6066.78</td>\n      <td>2004-10-19</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>14571.44</td>\n      <td>2003-06-05</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>1676.14</td>\n      <td>2004-12-18</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>14191.12</td>\n      <td>2004-12-17</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>32641.98</td>\n      <td>2003-06-06</td>\n    </tr>\n    <tr>\n      <th>...</th>\n      <td>...</td>\n      <td>...</td>\n    </tr>\n    <tr>\n      <th>254</th>\n      <td>59265.14</td>\n      <td>2003-12-26</td>\n    </tr>\n    <tr>\n      <th>255</th>\n      <td>6276.60</td>\n      <td>2004-05-14</td>\n    </tr>\n    <tr>\n      <th>256</th>\n      <td>30253.75</td>\n      <td>2005-05-25</td>\n    </tr>\n    <tr>\n      <th>257</th>\n      <td>32077.44</td>\n      <td>2003-07-16</td>\n    </tr>\n    <tr>\n      <th>258</th>\n      <td>52166.00</td>\n      <td>2004-12-31</td>\n    </tr>\n  </tbody>\n</table>\n<p>259 rows × 2 columns</p>\n</div>",
-            "text/plain": "       amount paymentdate\n0     6066.78  2004-10-19\n1    14571.44  2003-06-05\n2     1676.14  2004-12-18\n3    14191.12  2004-12-17\n4    32641.98  2003-06-06\n..        ...         ...\n254  59265.14  2003-12-26\n255   6276.60  2004-05-14\n256  30253.75  2005-05-25\n257  32077.44  2003-07-16\n258  52166.00  2004-12-31\n\n[259 rows x 2 columns]"
-          },
-          "metadata": {}
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {
+        "gather": {
+          "logged": 1738222927166
         }
-      ],
-      "execution_count": 73,
-      "metadata": {}
+      }
     },
     {
       "cell_type": "code",
@@ -915,18 +764,13 @@
         "\n",
         "multindex_payments.loc[(103,'OM314933')]"
       ],
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "execution_count": 86,
-          "data": {
-            "text/plain": "paymentdate    2004-12-18\namount            1676.14\nName: (103, OM314933), dtype: object"
-          },
-          "metadata": {}
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {
+        "gather": {
+          "logged": 1738222927207
         }
-      ],
-      "execution_count": 86,
-      "metadata": {}
+      }
     },
     {
       "cell_type": "code",
@@ -935,19 +779,13 @@
         "\n",
         "df_payments.iloc[:3]"
       ],
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "execution_count": 87,
-          "data": {
-            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>customernumber</th>\n      <th>checknumber</th>\n      <th>paymentdate</th>\n      <th>amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>103</td>\n      <td>HQ336336</td>\n      <td>2004-10-19</td>\n      <td>6066.78</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>103</td>\n      <td>JM555205</td>\n      <td>2003-06-05</td>\n      <td>14571.44</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>103</td>\n      <td>OM314933</td>\n      <td>2004-12-18</td>\n      <td>1676.14</td>\n    </tr>\n  </tbody>\n</table>\n</div>",
-            "text/plain": "   customernumber checknumber paymentdate    amount\n0             103    HQ336336  2004-10-19   6066.78\n1             103    JM555205  2003-06-05  14571.44\n2             103    OM314933  2004-12-18   1676.14"
-          },
-          "metadata": {}
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {
+        "gather": {
+          "logged": 1738222927239
         }
-      ],
-      "execution_count": 87,
-      "metadata": {}
+      }
     },
     {
       "cell_type": "code",
@@ -958,24 +796,13 @@
         "print(mask)\n",
         "df_payments.loc[mask]"
       ],
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": "0      False\n1      False\n2      False\n3      False\n4      False\n       ...  \n254     True\n255     True\n256     True\n257     True\n258     True\nLength: 259, dtype: bool\n"
-        },
-        {
-          "output_type": "execute_result",
-          "execution_count": 90,
-          "data": {
-            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>customernumber</th>\n      <th>checknumber</th>\n      <th>paymentdate</th>\n      <th>amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>97</th>\n      <td>201</td>\n      <td>DP677013</td>\n      <td>2003-10-20</td>\n      <td>23908.24</td>\n    </tr>\n    <tr>\n      <th>98</th>\n      <td>201</td>\n      <td>OO846801</td>\n      <td>2004-06-15</td>\n      <td>37258.94</td>\n    </tr>\n    <tr>\n      <th>99</th>\n      <td>202</td>\n      <td>HI358554</td>\n      <td>2003-12-18</td>\n      <td>36527.61</td>\n    </tr>\n    <tr>\n      <th>100</th>\n      <td>202</td>\n      <td>IQ627690</td>\n      <td>2004-11-08</td>\n      <td>33594.58</td>\n    </tr>\n    <tr>\n      <th>101</th>\n      <td>204</td>\n      <td>GC697638</td>\n      <td>2004-08-13</td>\n      <td>51152.86</td>\n    </tr>\n    <tr>\n      <th>...</th>\n      <td>...</td>\n      <td>...</td>\n      <td>...</td>\n      <td>...</td>\n    </tr>\n    <tr>\n      <th>254</th>\n      <td>495</td>\n      <td>BH167026</td>\n      <td>2003-12-26</td>\n      <td>59265.14</td>\n    </tr>\n    <tr>\n      <th>255</th>\n      <td>495</td>\n      <td>FN155234</td>\n      <td>2004-05-14</td>\n      <td>6276.60</td>\n    </tr>\n    <tr>\n      <th>256</th>\n      <td>496</td>\n      <td>EU531600</td>\n      <td>2005-05-25</td>\n      <td>30253.75</td>\n    </tr>\n    <tr>\n      <th>257</th>\n      <td>496</td>\n      <td>MB342426</td>\n      <td>2003-07-16</td>\n      <td>32077.44</td>\n    </tr>\n    <tr>\n      <th>258</th>\n      <td>496</td>\n      <td>MN89921</td>\n      <td>2004-12-31</td>\n      <td>52166.00</td>\n    </tr>\n  </tbody>\n</table>\n<p>162 rows × 4 columns</p>\n</div>",
-            "text/plain": "     customernumber checknumber paymentdate    amount\n97              201    DP677013  2003-10-20  23908.24\n98              201    OO846801  2004-06-15  37258.94\n99              202    HI358554  2003-12-18  36527.61\n100             202    IQ627690  2004-11-08  33594.58\n101             204    GC697638  2004-08-13  51152.86\n..              ...         ...         ...       ...\n254             495    BH167026  2003-12-26  59265.14\n255             495    FN155234  2004-05-14   6276.60\n256             496    EU531600  2005-05-25  30253.75\n257             496    MB342426  2003-07-16  32077.44\n258             496     MN89921  2004-12-31  52166.00\n\n[162 rows x 4 columns]"
-          },
-          "metadata": {}
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {
+        "gather": {
+          "logged": 1738222927269
         }
-      ],
-      "execution_count": 90,
-      "metadata": {}
+      }
     },
     {
       "cell_type": "code",
@@ -985,15 +812,13 @@
         "print(df_payments.loc[mask])\n",
         "print(df_payments.loc[df_payments['amount']>0])\n"
       ],
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": "     customernumber checknumber paymentdate  amount\n97              201    DP677013  2025-01-01     0.0\n98              201    OO846801  2025-01-01     0.0\n99              202    HI358554  2025-01-01     0.0\n100             202    IQ627690  2025-01-01     0.0\n101             204    GC697638  2025-01-01     0.0\n..              ...         ...         ...     ...\n254             495    BH167026  2025-01-01     0.0\n255             495    FN155234  2025-01-01     0.0\n256             496    EU531600  2025-01-01     0.0\n257             496    MB342426  2025-01-01     0.0\n258             496     MN89921  2025-01-01     0.0\n\n[162 rows x 4 columns]\n    customernumber checknumber paymentdate    amount\n0              103    HQ336336  2004-10-19   6066.78\n1              103    JM555205  2003-06-05  14571.44\n2              103    OM314933  2004-12-18   1676.14\n3              112    BO864823  2004-12-17  14191.12\n4              112     HQ55022  2003-06-06  32641.98\n..             ...         ...         ...       ...\n92             189    BO711618  2004-10-03  17359.53\n93             189    NM916675  2004-03-01  32538.74\n94             198    FI192930  2004-12-06   9658.74\n95             198    HQ920205  2003-07-06   6036.96\n96             198    IS946883  2004-09-21   5858.56\n\n[97 rows x 4 columns]\n"
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {
+        "gather": {
+          "logged": 1738222927301
         }
-      ],
-      "execution_count": 92,
-      "metadata": {}
+      }
     },
     {
       "cell_type": "code",
@@ -1945,8 +1770,8 @@
         "\n",
         "# Agrupar los datos por nombre de producto y año\n",
         "# Calcular el número de compras totales y el monto total\n",
-        "resumen = mix_df.groupby(['Product', 'Year']).agg(\n",
-        "    num_compras=('Code', 'count'),\n",
+        "resumen = mix_df.groupby(['Name.x', 'Year']).agg(\n",
+        "    num_compras=('Product', 'count'),\n",
         "    monto_total=('Price', 'sum')\n",
         ").reset_index()\n",
         "\n",
@@ -1962,21 +1787,21 @@
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "Columnas de Productos: Index(['Product', 'Name.x', 'provider', 'Price'], dtype='object')\nColumnas de Compras: Index(['Code', 'Product', 'Seller', 'Buyer', 'Fecha', 'Quantity'], dtype='object')\n     Product  Year  num_compras  monto_total\n0          1  2019            6    53.481556\n1          1  2020           13   115.876704\n2          1  2021            3    26.740778\n3          2  2019            8    85.645240\n4          2  2020            5    53.528275\n..       ...   ...          ...          ...\n200       69  2019            7   259.493442\n201       69  2020            4   148.281967\n202       70  2019           13   525.258332\n203       70  2020            7   282.831410\n204       70  2021            2    80.808974\n\n[205 rows x 4 columns]\n"
+          "text": "Columnas de Productos: Index(['Product', 'Name.x', 'provider', 'Price'], dtype='object')\nColumnas de Compras: Index(['Code', 'Product', 'Seller', 'Buyer', 'Fecha', 'Quantity'], dtype='object')\n                                      Name.x  Year  num_compras  monto_total\n0                           American cheeses  2019            6    53.481556\n1                           American cheeses  2020           13   115.876704\n2                           American cheeses  2021            3    26.740778\n3    Appellation d'Origine Contrôlée cheeses  2019            8    85.645240\n4    Appellation d'Origine Contrôlée cheeses  2020            5    53.528275\n..                                       ...   ...          ...          ...\n200                               Vegetables  2019            7   259.493442\n201                               Vegetables  2020            4   148.281967\n202                                   Vodkas  2019           13   525.258332\n203                                   Vodkas  2020            7   282.831410\n204                                   Vodkas  2021            2    80.808974\n\n[205 rows x 4 columns]\n"
         },
         {
           "output_type": "execute_result",
-          "execution_count": 17,
+          "execution_count": 3,
           "data": {
             "text/plain": "\"gdf=mix_df.groupby(['ProductName', mix_df['Fecha'].dt.year]\\n).agg({'Quantity':sum, 'Price':sum})\\ngdf\""
           },
           "metadata": {}
         }
       ],
-      "execution_count": 17,
+      "execution_count": 3,
       "metadata": {
         "gather": {
-          "logged": 1738059304282
+          "logged": 1738226721618
         }
       }
     },
@@ -2422,7 +2247,7 @@
       "source": [
         "#2_Escribe un programa Pandas para contar la supervivencia por género, categorías y edad de varias clases. Siendo las categorías de edad: (0, 10), (10, 30), (30, 60), (60, 80)\n",
         "titanic=pd.read_csv('https://raw.githubusercontent.com/ricardoahumada/DataScienceBasics/refs/heads/main/data/titanic.csv')\n",
-        "titanic['rangos_edad']=pd.cut(x=titanic['age'],bins=[0,10,30,60,80])\n",
+        "titanic['cage']=pd.cut(x=titanic['age'],bins=[0,10,30,60,80])\n",
         "titanic.pop('Unnamed: 15')\n",
         "titanic\n",
         "\n",
@@ -2430,31 +2255,39 @@
         "superv_class=pd.concat([titanic,supervivencia], axis=1)\n",
         "print(superv_class)\n",
         "\n",
-        "superv_order=superv_class.groupby(['sex','rangos_edad']).agg({'First':'count','Second':'count','Third':'count'})\n",
-        "superv_order"
+        "superv_order=superv_class.groupby(['sex','cage']).agg({'First':'count','Second':'count','Third':'count'})\n",
+        "superv_order\n",
+        "\n"
       ],
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
-          "text": "     survived  pclass     sex   age  sibsp  parch     fare embarked   class  \\\n0           0       3    male  22.0      1      0   7.2500        S   Third   \n1           1       1  female  38.0      1      0  71.2833        C   First   \n2           1       3  female  26.0      0      0   7.9250        S   Third   \n3           1       1  female  35.0      1      0  53.1000        S   First   \n4           0       3    male  35.0      0      0   8.0500        S   Third   \n..        ...     ...     ...   ...    ...    ...      ...      ...     ...   \n886         0       2    male  27.0      0      0  13.0000        S  Second   \n887         1       1  female  19.0      0      0  30.0000        S   First   \n888         0       3  female   NaN      1      2  23.4500        S   Third   \n889         1       1    male  26.0      0      0  30.0000        C   First   \n890         0       3    male  32.0      0      0   7.7500        Q   Third   \n\n       who  adult_male deck  embark_town alive  alone   rangos_edad  First  \\\n0      man        True  NaN  Southampton    no  False  (10.0, 30.0]    NaN   \n1    woman       False    C    Cherbourg   yes  False  (30.0, 60.0]    1.0   \n2    woman       False  NaN  Southampton   yes   True  (10.0, 30.0]    NaN   \n3    woman       False    C  Southampton   yes  False  (30.0, 60.0]    1.0   \n4      man        True  NaN  Southampton    no   True  (30.0, 60.0]    NaN   \n..     ...         ...  ...          ...   ...    ...           ...    ...   \n886    man        True  NaN  Southampton    no   True  (10.0, 30.0]    NaN   \n887  woman       False    B  Southampton   yes   True  (10.0, 30.0]    1.0   \n888  woman       False  NaN  Southampton    no  False           NaN    NaN   \n889    man        True    C    Cherbourg   yes   True  (10.0, 30.0]    1.0   \n890    man        True  NaN   Queenstown    no   True  (30.0, 60.0]    NaN   \n\n     Second  Third  \n0       NaN    0.0  \n1       NaN    NaN  \n2       NaN    1.0  \n3       NaN    NaN  \n4       NaN    0.0  \n..      ...    ...  \n886     0.0    NaN  \n887     NaN    NaN  \n888     NaN    0.0  \n889     NaN    NaN  \n890     NaN    0.0  \n\n[891 rows x 19 columns]\n"
+          "text": "     survived  pclass     sex   age  sibsp  parch     fare embarked   class  \\\n0           0       3    male  22.0      1      0   7.2500        S   Third   \n1           1       1  female  38.0      1      0  71.2833        C   First   \n2           1       3  female  26.0      0      0   7.9250        S   Third   \n3           1       1  female  35.0      1      0  53.1000        S   First   \n4           0       3    male  35.0      0      0   8.0500        S   Third   \n..        ...     ...     ...   ...    ...    ...      ...      ...     ...   \n886         0       2    male  27.0      0      0  13.0000        S  Second   \n887         1       1  female  19.0      0      0  30.0000        S   First   \n888         0       3  female   NaN      1      2  23.4500        S   Third   \n889         1       1    male  26.0      0      0  30.0000        C   First   \n890         0       3    male  32.0      0      0   7.7500        Q   Third   \n\n       who  adult_male deck  embark_town alive  alone          cage  First  \\\n0      man        True  NaN  Southampton    no  False  (10.0, 30.0]    NaN   \n1    woman       False    C    Cherbourg   yes  False  (30.0, 60.0]    1.0   \n2    woman       False  NaN  Southampton   yes   True  (10.0, 30.0]    NaN   \n3    woman       False    C  Southampton   yes  False  (30.0, 60.0]    1.0   \n4      man        True  NaN  Southampton    no   True  (30.0, 60.0]    NaN   \n..     ...         ...  ...          ...   ...    ...           ...    ...   \n886    man        True  NaN  Southampton    no   True  (10.0, 30.0]    NaN   \n887  woman       False    B  Southampton   yes   True  (10.0, 30.0]    1.0   \n888  woman       False  NaN  Southampton    no  False           NaN    NaN   \n889    man        True    C    Cherbourg   yes   True  (10.0, 30.0]    1.0   \n890    man        True  NaN   Queenstown    no   True  (30.0, 60.0]    NaN   \n\n     Second  Third  \n0       NaN    0.0  \n1       NaN    NaN  \n2       NaN    1.0  \n3       NaN    NaN  \n4       NaN    0.0  \n..      ...    ...  \n886     0.0    NaN  \n887     NaN    NaN  \n888     NaN    0.0  \n889     NaN    NaN  \n890     NaN    0.0  \n\n[891 rows x 19 columns]\n"
         },
         {
           "output_type": "execute_result",
-          "execution_count": 30,
+          "execution_count": 4,
           "data": {
-            "text/plain": "                    First  Second  Third\nsex    rangos_edad                      \nfemale (0, 10]          1       8     22\n       (10, 30]        34      36     57\n       (30, 60]        48      30     22\n       (60, 80]         2       0      1\nmale   (0, 10]          2       9     22\n       (10, 30]        24      43    151\n       (30, 60]        63      44     76\n       (60, 80]        12       3      4",
-            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th></th>\n      <th>First</th>\n      <th>Second</th>\n      <th>Third</th>\n    </tr>\n    <tr>\n      <th>sex</th>\n      <th>rangos_edad</th>\n      <th></th>\n      <th></th>\n      <th></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th rowspan=\"4\" valign=\"top\">female</th>\n      <th>(0, 10]</th>\n      <td>1</td>\n      <td>8</td>\n      <td>22</td>\n    </tr>\n    <tr>\n      <th>(10, 30]</th>\n      <td>34</td>\n      <td>36</td>\n      <td>57</td>\n    </tr>\n    <tr>\n      <th>(30, 60]</th>\n      <td>48</td>\n      <td>30</td>\n      <td>22</td>\n    </tr>\n    <tr>\n      <th>(60, 80]</th>\n      <td>2</td>\n      <td>0</td>\n      <td>1</td>\n    </tr>\n    <tr>\n      <th rowspan=\"4\" valign=\"top\">male</th>\n      <th>(0, 10]</th>\n      <td>2</td>\n      <td>9</td>\n      <td>22</td>\n    </tr>\n    <tr>\n      <th>(10, 30]</th>\n      <td>24</td>\n      <td>43</td>\n      <td>151</td>\n    </tr>\n    <tr>\n      <th>(30, 60]</th>\n      <td>63</td>\n      <td>44</td>\n      <td>76</td>\n    </tr>\n    <tr>\n      <th>(60, 80]</th>\n      <td>12</td>\n      <td>3</td>\n      <td>4</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+            "text/plain": "                 First  Second  Third\nsex    cage                          \nfemale (0, 10]       1       8     22\n       (10, 30]     34      36     57\n       (30, 60]     48      30     22\n       (60, 80]      2       0      1\nmale   (0, 10]       2       9     22\n       (10, 30]     24      43    151\n       (30, 60]     63      44     76\n       (60, 80]     12       3      4",
+            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th></th>\n      <th>First</th>\n      <th>Second</th>\n      <th>Third</th>\n    </tr>\n    <tr>\n      <th>sex</th>\n      <th>cage</th>\n      <th></th>\n      <th></th>\n      <th></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th rowspan=\"4\" valign=\"top\">female</th>\n      <th>(0, 10]</th>\n      <td>1</td>\n      <td>8</td>\n      <td>22</td>\n    </tr>\n    <tr>\n      <th>(10, 30]</th>\n      <td>34</td>\n      <td>36</td>\n      <td>57</td>\n    </tr>\n    <tr>\n      <th>(30, 60]</th>\n      <td>48</td>\n      <td>30</td>\n      <td>22</td>\n    </tr>\n    <tr>\n      <th>(60, 80]</th>\n      <td>2</td>\n      <td>0</td>\n      <td>1</td>\n    </tr>\n    <tr>\n      <th rowspan=\"4\" valign=\"top\">male</th>\n      <th>(0, 10]</th>\n      <td>2</td>\n      <td>9</td>\n      <td>22</td>\n    </tr>\n    <tr>\n      <th>(10, 30]</th>\n      <td>24</td>\n      <td>43</td>\n      <td>151</td>\n    </tr>\n    <tr>\n      <th>(30, 60]</th>\n      <td>63</td>\n      <td>44</td>\n      <td>76</td>\n    </tr>\n    <tr>\n      <th>(60, 80]</th>\n      <td>12</td>\n      <td>3</td>\n      <td>4</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
           },
           "metadata": {}
         }
       ],
-      "execution_count": 30,
+      "execution_count": 4,
       "metadata": {
         "gather": {
-          "logged": 1738149869654
+          "logged": 1738226822525
         }
       }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {}
     },
     {
       "cell_type": "code",
@@ -2515,7 +2348,7 @@
         "\n",
         "\n",
         "# Agrupar los datos por género y clase de cabina y contar el número de mujeres y hombres en cada clase\n",
-        "cantidad_por_genero_clase = titanic.groupby(['sex', 'class']).size().reset_index(name='count')\n",
+        "cantidad_por_genero_clase = titanic.groupby(['sex', 'pclass']).size().reset_index(name='count')\n",
         "\n",
         "cantidad_por_genero_clase\n",
         "\n"
@@ -2523,18 +2356,18 @@
       "outputs": [
         {
           "output_type": "execute_result",
-          "execution_count": 47,
+          "execution_count": 14,
           "data": {
-            "text/plain": "      sex   class  count\n0  female   First     94\n1  female  Second     76\n2  female   Third    144\n3    male   First    122\n4    male  Second    108\n5    male   Third    347",
-            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>sex</th>\n      <th>class</th>\n      <th>count</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>female</td>\n      <td>First</td>\n      <td>94</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>female</td>\n      <td>Second</td>\n      <td>76</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>female</td>\n      <td>Third</td>\n      <td>144</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>male</td>\n      <td>First</td>\n      <td>122</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>male</td>\n      <td>Second</td>\n      <td>108</td>\n    </tr>\n    <tr>\n      <th>5</th>\n      <td>male</td>\n      <td>Third</td>\n      <td>347</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+            "text/plain": "      sex  pclass  count\n0  female       1     94\n1  female       2     76\n2  female       3    144\n3    male       1    122\n4    male       2    108\n5    male       3    347",
+            "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>sex</th>\n      <th>pclass</th>\n      <th>count</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>female</td>\n      <td>1</td>\n      <td>94</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>female</td>\n      <td>2</td>\n      <td>76</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>female</td>\n      <td>3</td>\n      <td>144</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>male</td>\n      <td>1</td>\n      <td>122</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>male</td>\n      <td>2</td>\n      <td>108</td>\n    </tr>\n    <tr>\n      <th>5</th>\n      <td>male</td>\n      <td>3</td>\n      <td>347</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
           },
           "metadata": {}
         }
       ],
-      "execution_count": 47,
+      "execution_count": 14,
       "metadata": {
         "gather": {
-          "logged": 1738152380148
+          "logged": 1738223716539
         }
       }
     },
